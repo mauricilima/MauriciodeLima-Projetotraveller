@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de ponto turístico</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="cadTourism">
+    
+    <div class="imgFormDesktop">
+      <img src="./images/viagem.jpg" alt="Turistas">
+    </div>
+
+    <div class="containerForm">
+      <form class="formTourism">
+        <h1>Cadastro de ponto turístico</h1>
+          <p class="formDesc">Preencha todos os campos para fazer o cadastro do seu ponto turístico
+          Não se esqueça de subir suas lindas imagens para os internautas.</p>
+        <div class="formItems">
+          <div class="formCol">
+            <div class="formItem">
+              <label for="name">Nome do ponto turísticos:</label>
+              <input class="input" type="text" id="name" required>
+            </div>
+            <div class="mutipleformItem">
+              <div class="formItem">
+                <label for="country">País:</label>
+                <select name="paises" id="paises" class="select" required>
+                  <option value="" disabled selected> Selecione um Pais </option>
+                  <option value="Brasil">Brasil</option>
+                </select>
+              </div>
+              <div class="formItem">
+                <label for="state">Estado:</label>
+                <select class="select" name="state" id="state" required>
+                  <option value="" disabled selected> Selecione uma estado </option>
+                </select>
+              </div>
+              <div class="formItem">
+                <label for="city">Cidade:</label>
+                <select class="select" name="city" id="city" required>
+                  <option value="" disabled selected> Selecione uma cidade </option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="formCol">
+          
+            <div class="mutipleformItem">
+              <div class="formItem">
+                <label for="address">Endereço:</label>
+                <input class="input" type="text" id="address" required>
+              </div>
+              <div class="formItem">
+                <label for="number">N°:</label>
+                <input class="input" type="number" id="number" required>
+              </div>
+            </div>
+          </div>
+          <div class="formCol">
+            <div class="formItem time">
+              <label for="name">Horário de entrada:</label>
+              <ul>
+                <li>
+                  <input class="checkBox" type="checkbox" id="manha" name="manha" value="manha">
+                  </label>Manhã</label>
+                </li>
+                <li>
+                  <input class="checkBox" type="checkbox" id="tarde" name="tarde" value="tarde">
+                  </label>Tarde</label>
+                </li>
+                <li>
+                  <input class="checkBox" type="checkbox" id="noite" name="noite " value="noite">
+                  </label>Noite</label>
+                </li>
+              </ul>
+            </div>
+            <div class="formItem">
+              <label for="preco">Preço de entrada:</label>
+              <input class="input" type="text" id="preco">
+            </div>
+
+          </div>
+          <div class="formCol">
+            <div class="formItem">
+              <label for="cep">Cep:</label>
+              <input class="input" type="text" id="cep" name="cep" required pattern="\d{5}-\d{3}">
+            </div>
+            <div class="formItem">
+              <label for="fileImg">Imagem do ponto turisticos:</label>
+              <label class="labelUpload" for="fileImg">
+                <input class="inputUpload" type="file" accept="image/*" id="fileImg">
+                <i class="fa-solid fa-image"></i>
+                Selecione as imagens
+              </label>
+            </div>
+          </div>
+          <div class="formCol fullLine">
+            <div class="formItem described">
+              <label for="described">Descrição:</label>
+              <textarea class="input txtArea" type="text" id="described"></textarea>
+            </div>
+          </div>
+          <div class="formCol fullLine">
+            <div class="formItem assinaturaTermo">
+              <label for="described">
+                <input class="checkBox" type="checkbox" id="assinaturaTermo" value="true" required>
+                Assinatura de Termo</label>
+            </div>
+          </div>
+          <button class="fullLine" type="submit" id="submitForm">Cadastar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="./js/js.js"></script>
+</body>
+
+</html>
